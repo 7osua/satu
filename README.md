@@ -2,8 +2,6 @@
 
 ### Intro
 
----
-
 This website was created to sharpen basic skills and knowledge such as how a
 page works on a web. Through this web, I can master many things, starting from
 the process of how a website will be displayed until it can be accessed directly
@@ -14,18 +12,14 @@ and make better after this.
 
 ## The Goal
 
----
-
 -   [x] Designing with Figma
--   [x] Build it from basic (everything from Vanilla)
+-   [x] Build it from the basic (everything from Vanilla)
 -   [ ] Add Modern CSS (Flexbox + Grid)
 -   [ ] Add CSS Preprocessor (SASS)
 -   [ ] Deploy to Digital Ocean Droplet
 -   [ ] Add more interactivity with JavaScript
 
 ## What do I use ?
-
----
 
 -   VS Code
 -   Chrome
@@ -41,12 +35,8 @@ and make better after this.
 
 ## Start simple, make it work, and develop it
 
----
-
 Start with simple things, over time fulfill all the goals to be achieved.
 
 ## Conclusion
-
----
 
 **Start small, Go Solo, Very Excited :grin:**
