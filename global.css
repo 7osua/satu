@@ -168,6 +168,7 @@ p {
 
 .navigation-brand {
     display: inline-block;
+    outline: none;
     vertical-align: middle;
     width: 3rem;
     padding-left: 1rem;

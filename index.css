@@ -121,7 +121,7 @@
     .place-card {
         display: inline-block;
         vertical-align: top;
-        width: 31%;
+        width: 30%;
     }
 
     .place-card:nth-child(2) {
@@ -146,7 +146,7 @@
 
 .place-card-title,
 .place-card-link {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .place-card-title {
@@ -266,7 +266,7 @@
 .testimonial {
     display: block;
     width: 80%;
-    min-height: 22rem;
+    min-height: 22.5rem;
     height: 100%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
@@ -288,7 +288,7 @@
     }
 
     .testimonial:nth-child(2n + 1) {
-        min-height: 22rem;
+        min-height: 24rem;
         margin: 0;
         background-color: #d0ebff;
     }

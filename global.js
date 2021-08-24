@@ -27,7 +27,9 @@ toggleButton.addEventListener('click', function () {
 });
 
 backdrop.addEventListener('click', closeModal);
-modalNoButton.addEventListener('click', closeModal);
+if (modal) {
+    modalNoButton.addEventListener('click', closeModal);
+}
 
 function closeModal() {
     if (modal) {

@@ -97,6 +97,7 @@
 
 .region-infos-destination {
     width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 48rem) {
