@@ -12,6 +12,10 @@ for (var i = 0; i < selectAvailable.length; i++) {
     selectAvailable[i].addEventListener('click', function () {
         backdrop.style.display = 'block';
         modal.style.display = 'block';
+        setTimeout(() => {
+            backdrop.classList.toggle('open');
+            modal.classList.toggle('open');
+        }, 200);
     });
 }
 
@@ -19,11 +23,19 @@ for (var i = 0; i < selectPackage.length; i++) {
     selectPackage[i].addEventListener('click', function () {
         backdrop.style.display = 'block';
         modal.style.display = 'block';
+        setTimeout(() => {
+            backdrop.classList.toggle('open');
+            modal.classList.toggle('open');
+        }, 200);
     });
 }
 toggleButton.addEventListener('click', function () {
     backdrop.style.display = 'block';
     mobileNavigations.style.display = 'block';
+    setTimeout(() => {
+        mobileNavigations.classList.toggle('open');
+        backdrop.classList.toggle('open');
+    }, 200);
 });
 
 backdrop.addEventListener('click', closeModal);
@@ -32,6 +44,14 @@ if (modal) {
 }
 
 function closeModal() {
+    setTimeout(() => {
+        modal.classList.remove('open');
+        backdrop.classList.remove('open');
+        if (mobileNavigations) {
+            mobileNavigations.classList.remove('open');
+        }
+    }, 200);
+
     if (modal) {
         modal.style.display = 'none';
     }

@@ -1,3 +1,17 @@
+@media (min-width: 48rem) {
+    @supports (display: grid) {
+        body {
+            display: grid;
+            grid-template-rows: 6rem  repeat(3, max-content);
+            grid-template-areas:
+                'nav'
+                'header'
+                'main'
+                'footer';
+        }
+    }
+}
+
 .places,
 .packages,
 .testimonials {
@@ -24,8 +38,15 @@
 
 @media (min-width: 48rem) {
     .welcomes {
-        max-height: calc(100vh - 6rem);
+        min-height: calc(100vh - 6rem);
         margin: 6rem 0 0;
+    }
+
+    @supports (display:grid){
+        .welcomes{
+            grid-area: header;
+            margin: 0;
+        }
     }
 }
 

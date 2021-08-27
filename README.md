@@ -37,6 +37,10 @@ and make better after this.
 
 Start with simple things, over time fulfill all the goals to be achieved.
 
+## work with FIGMA
+
+## The Vanilla (HTML, CSS, JavaScript) 
+
 ## Conclusion
 
 **Start small, Go Solo, Very Excited :grin:**
