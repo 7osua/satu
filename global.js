@@ -29,6 +29,7 @@ for (var i = 0; i < selectPackage.length; i++) {
         }, 200);
     });
 }
+
 toggleButton.addEventListener('click', function () {
     backdrop.style.display = 'block';
     mobileNavigations.style.display = 'block';
@@ -45,7 +46,6 @@ if (modal) {
 
 function closeModal() {
     setTimeout(() => {
-        modal.classList.remove('open');
         backdrop.classList.remove('open');
         if (mobileNavigations) {
             mobileNavigations.classList.remove('open');
@@ -53,6 +53,7 @@ function closeModal() {
     }, 200);
 
     if (modal) {
+        modal.classList.remove('open');
         modal.style.display = 'none';
     }
     mobileNavigations.style.display = 'none';

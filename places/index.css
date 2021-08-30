@@ -1,11 +1,35 @@
 .regions {
     max-width: 1077px;
-    margin: 0 auto;
+    margin: 10rem auto 0;
+}
+
+@media (min-width: 48rem) {
+    @supports (display: flex) {
+        .regions {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+        }
+    }
 }
 
 .region {
-    margin-top: 15%;
     height: 85%;
+    margin: 3rem 0 5rem;
+}
+
+@media (min-width: 48rem) {
+    @supports (display: flex) {
+        .region {
+            margin: 5rem 0 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
 
 #region-barat-photos {
@@ -34,9 +58,9 @@
 #region-timur-photos {
     width: 90%;
     margin: 0 auto;
-    background: no-repeat url('../assets/images/timur-raja-ampat-075x.png') 40%
+    background: no-repeat url('../assets/images/timur-raja-ampat-075x.png') 30%
             50% / 10rem,
-        no-repeat url('../assets/images/timur-puncak-jayawijaya-075x.png') 65%
+        no-repeat url('../assets/images/timur-puncak-jayawijaya-075x.png') 70%
             50% / 8rem;
     height: 10rem;
     padding: 0.5rem;
@@ -46,9 +70,9 @@
     #region-barat-photos {
         width: 70%;
         margin: 0 auto;
-        background: no-repeat url('../assets/images/barat-semeru-075x.png') 0%
+        background: no-repeat url('../assets/images/barat-semeru-075x.png') 10%
                 50% / 16rem,
-            no-repeat url('../assets/images/barat-bromo-075x.png') 45% 50% /
+            no-repeat url('../assets/images/barat-bromo-075x.png') 50% 50% /
                 18rem,
             no-repeat url('../assets/images/barat-jomblang-075x.png') 90% 50% /
                 16rem;
@@ -76,9 +100,9 @@
         width: 70%;
         margin: 0 auto;
         background: no-repeat url('../assets/images/timur-raja-ampat-075x.png')
-                25% 50% / 18rem,
+                35% 50% / 18rem,
             no-repeat url('../assets/images/timur-puncak-jayawijaya-075x.png')
-                65% 50% / 16rem;
+                75% 50% / 16rem;
         height: 20rem;
         padding: 2rem;
     }
@@ -92,12 +116,28 @@
 
 .region-infos {
     max-width: 47rem;
-    margin: 0 auto;
+}
+
+@media (min-width: 48rem) {
+    @supports (display: flex) {
+        .region-infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+        }
+    }
 }
 
 .region-infos-destination {
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem auto 1rem;
+}
+
+@supports (display: flex) {
+    .region-infos-destination {
+        display: block;
+    }
 }
 
 @media (min-width: 48rem) {

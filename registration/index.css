@@ -6,8 +6,10 @@
 
 .registration-title {
     font-size: 2rem;
-    width: 75%;
-    margin: 2rem auto 2rem;
+    letter-spacing: 0.25px;
+    width: 100%;
+    text-align: center;
+    margin: 7rem auto 2rem;
     color: #212529;
 }
 
@@ -20,6 +22,17 @@ form {
     margin: 1rem auto 0;
 }
 
+@supports (display: grid) {
+    .input-group {
+        display: grid;
+        grid-template-columns: 28% 1fr;
+        grid-template-rows: minmax(1rem, auto);
+        grid-gap: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 div.input-group:nth-of-type(7) {
     position: relative;
     left: 12.5%;
@@ -29,6 +42,19 @@ div.input-group:nth-of-type(7) {
 @media (orientation: landscape) {
     div.input-group:nth-of-type(7) {
         width: 88%;
+    }
+}
+
+@supports (display: grid) {
+    div.input-group:nth-of-type(7) {
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    div.input-group:nth-of-type(7) > input[type='checkbox'] {
+        /* position: static; */
+        justify-self: end;
     }
 }
 
@@ -64,6 +90,13 @@ label[for='agree'] {
     position: relative;
     left: 12%;
     width: 68%;
+}
+
+@supports (display: grid) {
+    label[for='agree'] {
+        width: 100%;
+        left: 0;
+    }
 }
 
 input {
@@ -102,6 +135,11 @@ select.user-select {
     -moz-appearance: none;
 }
 
+@supports (display: grid) {
+    .input-group > input[type='checkbox'] {
+    }
+}
+
 .input-group > input[type='checkbox']:checked {
     border-color: #212529;
     background-color: #1864ab;
@@ -124,6 +162,17 @@ select.user-select {
     border-color: #212529;
 }
 
+@supports (display: grid) {
+    input {
+        max-width: 85%;
+        width: 100%;
+    }
+
+    select.user-select {
+        max-width: 87%;
+        width: 100%;
+    }
+}
 form > #join-cta {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -141,8 +190,7 @@ form > #join-cta {
     .registration-title {
         font-size: 4rem;
         letter-spacing: 0.5px;
-        width: 88%;
-        margin: 6rem auto 2rem;
+        margin: 6rem 1rem 2rem;
     }
 
     form {
@@ -177,6 +225,13 @@ form > #join-cta {
         width: 78%;
     }
 
+    @supports (display: grid) {
+        label[for='agree'] {
+            width: 100%;
+            left: 2%;
+        }
+    }
+
     input {
         max-width: 42%;
         width: 100%;
@@ -190,6 +245,16 @@ form > #join-cta {
         height: 2.6rem;
         font-size: 1.25rem;
         border-width: 4px;
+    }
+
+    @supports (display: grid) {
+        input {
+            max-width: 84%;
+        }
+
+        select.user-select {
+            width: 100%;
+        }
     }
 
     .input-group > input[type='checkbox'] {

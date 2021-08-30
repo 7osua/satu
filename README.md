@@ -14,10 +14,10 @@ and make better after this.
 
 -   [x] Designing with Figma
 -   [x] Build it from the basic (everything from Vanilla)
--   [ ] Add Modern CSS (Flexbox + Grid)
+-   [x] Add Modern CSS (Flexbox + Grid)
+-   [x] Deploy to Digital Ocean Droplet
+-   [X] Add more interactivity with JavaScript
 -   [ ] Add CSS Preprocessor (SASS)
--   [ ] Deploy to Digital Ocean Droplet
--   [ ] Add more interactivity with JavaScript
 
 ## What do I use ?
 

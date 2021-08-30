@@ -119,6 +119,7 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .navigations {
     position: fixed;
     z-index: 2;
@@ -134,9 +135,16 @@ p {
         height: 6rem;
     }
 
-    @supports (display: grid) {
-        .navigation {
+    @supports (display: grid) and (display:flex) {
+        .navigations {
             grid-area: nav;
+        }
+
+        .navigations
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }
@@ -159,6 +167,15 @@ p {
     top: 14%;
     list-style: none;
     height: 30%;
+}
+
+@supports (display:flex){
+    .mobile-navigation-links{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 
 .mobile-navigation-link {
@@ -245,6 +262,7 @@ p {
     list-style: none;
 }
 
+
 @media (min-width: 48rem) {
     .toggle-button {
         display: none;
@@ -257,6 +275,14 @@ p {
         margin: 0;
         width: calc(100% - 6rem);
         text-align: right;
+    }
+
+    @supports (display:flex){
+        .navigation-links{
+            display: flex;
+            justify-content: flex-end;
+            justify-items: center;
+        }
     }
 }
 
@@ -296,6 +322,7 @@ button,
 
 #join-cta:hover,
 #join-cta:active button:hover,
+button:hover,
 button:active {
     background-color: #a5d8ff;
 }
@@ -345,6 +372,15 @@ main {
     margin: 8rem 0 0 0;
 }
 
+@supports (display:flex){
+    .footers{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media (min-width: 48rem) {
     .footers {
         padding: 3rem 1rem;
@@ -382,6 +418,16 @@ main {
     }
 }
 
+@supports (display:flex){
+    .footer-head-link {
+        display:flex;
+    }
+    .footer-links{
+        display:flex;
+        flex-flow:column
+    }
+}
+
 .footer-head-link {
     max-height: 3.25rem;
     text-decoration: none;
@@ -393,6 +439,16 @@ main {
     width: 3.25rem;
     margin: 0;
     margin-right: calc(2% + 0.5rem);
+}
+
+@supports (display:flex){
+    .footer-head-link > img,
+    .footer-head-link > h1{
+        display: block;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (min-width: 48rem) {
