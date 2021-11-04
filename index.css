@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (min-width: 48rem) {
     @supports (display: grid) {
         body {
@@ -215,31 +216,31 @@
 
 .place-card-link {
     font-size: 0.9rem;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Press+Start+2P&family=Zilla+Slab:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 80rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    background-color: #000000;
+    color: #ffffff;
+>>>>>>> 6d0e4161deeddd101228dfd395a9e74e143f9336
     text-decoration: none;
-    font-weight: 700;
-    color: #1864ab;
+    line-height: 1.25rem;
+    font-family: 'Poppins', sans-serif;
 }
-
-@media (min-width: 48rem) {
-    .place-card-link {
-        font-size: 1.5rem;
-    }
-}
-
-.place-card-link:hover,
-.place-card-link:active {
-    border-bottom: 3px solid #1864ab;
-}
-
-@media (min-width: 48rem) {
-    .place-card-link:hover,
-    .place-card-link:active {
-        border-width: 4px;
-    }
-}
-
-.package-cards {
+.head {
     width: 100%;
+<<<<<<< HEAD
     height: 100%;
 }
 
@@ -328,32 +329,31 @@
     .package-card:nth-child(2) > .package-card-link > img {
         transform: scale(0.85);
     }
-}
-
-.testimonial {
-    display: block;
-    width: 80%;
-    min-height: 22.5rem;
-    height: 100%;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    padding: 1rem;
+=======
+    max-width: 47rem;
+    padding: 1rem 0 0;
     margin: 1rem auto;
-    background-color: #a5d8ff;
+>>>>>>> 6d0e4161deeddd101228dfd395a9e74e143f9336
 }
 
-.testimonial:nth-child(2n + 1) {
-    background-color: #d0ebff;
+.head-logo {
+    margin: 1rem auto;
+    max-width: 60%;
 }
 
-@media (min-width: 48rem) {
-    .testimonial {
-        display: inline-block;
-        vertical-align: middle;
-        width: calc(30% - 2rem);
-        margin: 0 2.5%;
+.head-logo-label {
+    font-family: 'Press Start 2P', cursive;
+    color: #f03e3e;
+}
+
+@supports (display: flex) {
+    .head-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+<<<<<<< HEAD
     .testimonial:nth-child(2n + 1) {
         min-height: 24rem;
         margin: 0;
@@ -381,59 +381,32 @@
 
 @media (min-width: 48rem) {
     .testimonial-photo {
+=======
+    .head-logo-image {
+>>>>>>> 6d0e4161deeddd101228dfd395a9e74e143f9336
         display: block;
-        width: 50%;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 50%;
-        margin: 5% auto 1rem;
-    }
-}
-
-.testimonial > h2,
-.testimonial > h3 {
-    text-align: center;
-}
-
-.testimonial-name {
-    font-size: 1.25rem;
-    color: #212529;
-    margin: 1rem 0 0 0;
-    padding: 0 1rem;
-}
-
-.testimonial-profession {
-    font-size: 0.8rem;
-    color: #212529;
-    margin: 0.5rem 0 0.8rem 0;
-    padding: 0 1rem;
-}
-
-.testimonial-text {
-    font-size: 0.8rem;
-    font-style: italic;
-    font-weight: 400;
-    padding: 0.8rem 1rem;
-}
-
-@media (min-width: 48rem) {
-    .testimonial-name {
-        font-size: 1.5rem;
-        color: #212529;
-        margin: 1rem 0 0 0;
-        padding: 0 1rem;
+        width: 4rem;
     }
 
-    .testimonial-profession {
-        font-size: 1.125rem;
-        color: #212529;
-        margin: 0.5rem 0 0.8rem 0;
-        padding: 0 1rem;
+    .head-logo-label {
+        font-size: 2rem;
+        padding-left: 8px;
     }
 
-    .testimonial-text {
-        font-size: 0.8rem;
-        font-style: italic;
-        font-weight: 500;
-        padding: 0.8rem 1rem;
+    @media (min-width: 48rem) {
+        .head-logo {
+            margin: 4rem auto;
+            max-width: 80%;
+        }
+
+        .head-logo-image {
+            display: block;
+            width: 8rem;
+        }
+
+        .head-logo-label {
+            font-size: 4rem;
+            padding-left: 24px;
+        }
     }
 }
