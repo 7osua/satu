@@ -1,5 +1,16 @@
 const root = document.getElementById('root');
 
+const createLoader = function () {
+    document.body.insertAdjacentHTML(
+        'beforeend',
+        `
+            <div class="loader">
+                <image src='assets/gifs/loading.gif' alt='loading...'/>
+            </div>
+        `,
+    );
+};
+
 const createHeader = function () {
     document.body.insertAdjacentHTML(
         'beforeend',
@@ -16,8 +27,15 @@ const createHeader = function () {
     );
 };
 
+const hideLoader = function (){
+    const loader = document.querySelector('.loader');
+    loader.className += ' hidden';
+};
+
 const initPage = function () {
+    createLoader();
+    hideLoader();
     createHeader();
 };
 
-window.onload = initPage();
+window.addEventListener('load', initPage);
