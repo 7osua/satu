@@ -151,7 +151,7 @@ body {
 #input-number {
     background-color: #212529;
     display: block;
-    width: 100%;
+    width: 96%;
     height: 3rem;
     margin: 0 auto 1rem;
     border: 1px #495057 solid;
@@ -225,7 +225,7 @@ body {
 
 #app-result {
     background-color: #212529;
-    width: 90%;
+    width: 88%;
     border: solid 1px #495057;
     border-radius: 1rem;
     padding: 0.5rem;
@@ -256,7 +256,7 @@ body {
 
 @media (min-width: 48rem) {
     #app-result {
-        width: 72%;
+        width: 74%;
         padding: 1rem;
         margin: 0 auto;
     }

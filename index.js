@@ -1,5 +1,7 @@
+const root = document.getElementById('root');
+
 const createLoader = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'beforeend',
         `
             <div class="loader">
@@ -15,7 +17,7 @@ const hideLoader = function () {
 };
 
 const createHeader = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'beforeend',
         `
             <header class="head">
@@ -31,7 +33,7 @@ const createHeader = function () {
 };
 
 const createMainApp = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'beforeend',
         `
             <main id="app">
@@ -42,10 +44,10 @@ const createMainApp = function () {
                 <section id="app-action">
                     <input type="number" id="input-number" placeholder="Angka . . .">
                     <div id="calculator-action">    
-                        <button type="button" id="btn-add">+</button>        
-                        <button type="button" id="btn-sub">-</button>        
-                        <button type="button" id="btn-mul">*</button>        
-                        <button type="button" id="btn-div">+</button>        
+                        <button type="button" id="add-btn" class="btn">+</button>        
+                        <button type="button" id="sub-btn" class="btn">-</button>        
+                        <button type="button" id="mul-btn" class="btn">*</button>        
+                        <button type="button" id="div-btn" class="btn">+</button>        
                     </div>
                 </section>
                 <section id="app-result">
@@ -58,12 +60,11 @@ const createMainApp = function () {
     );
 };
 
-
-const initPage = function () {
+const initPage = () => {
     createLoader();
     hideLoader();
     createHeader();
     createMainApp();
 };
 
-window.addEventListener('load', initPage);
+window.onload = initPage();
