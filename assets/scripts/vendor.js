@@ -1,22 +1,30 @@
+const userInput = document.getElementById('input-number');
+
 const addButton = document.getElementById('add-btn');
 const subButton = document.getElementById('sub-btn');
 const mulButton = document.getElementById('mul-btn');
 const divButton = document.getElementById('div-btn');
 
-const currentCalculation = document.getElementById('current-calculation');
+const currentCalculationOutput = document.getElementById('current-calculation');
+const currentResultOutput = document.getElementById('current-result');
+
+function outputResult(result, text) {
+    currentResultOutput.textContent = result;
+    currentCalculationOutput.textContent = text;
+}
 
 addButton.addEventListener('click', function () {
-    currentCalculation.textContent = 'Penjumlahan';
+    currentCalculationOutput.textContent = 'Penjumlahan';
 });
 
 subButton.addEventListener('click', function () {
-    currentCalculation.textContent = 'Pengurangan';
+    currentCalculationOutput.textContent = 'Pengurangan';
 });
 
 mulButton.addEventListener('click', function () {
-    currentCalculation.textContent = 'Pekalian';
+    currentCalculationOutput.textContent = 'Pekalian';
 });
 
 divButton.addEventListener('click', function () {
-    currentCalculation.textContent = 'Pembagian';
+    currentCalculationOutput.textContent = 'Pembagian';
 });
