@@ -15,6 +15,7 @@ body {
     text-decoration: none;
     line-height: 1.25rem;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
     font-weight: 300;
 }
 
@@ -118,14 +119,13 @@ body {
     font-family: 'Zilla Slab', serif;
     font-size: 1.5rem;
     line-height: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     margin: 0;
     text-align: center;
 }
 
 #app-text {
-    width:80%; 
-    font-size: 1rem;
+    width: 80%;
     margin: 1rem auto 0;
     line-height: 1.25rem;
 }
@@ -148,22 +148,26 @@ body {
     padding: 1rem;
 }
 
+#input-number,
+#calculator-action > button {
+    color: #f8f9fa;
+    background: #212529;
+    box-shadow: 0 0 8px #495057;
+    border: solid 1px #495057;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 #input-number {
-    background-color: #212529;
     display: block;
     width: 96%;
     height: 3rem;
     margin: 0 auto 1rem;
-    border: 1px #495057 solid;
-    border-radius: 1rem;
-    color: #f8f9fa;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-align: center;
 }
 
 #input-number:focus-visible,
-#calculator-action > button:focus-visible, 
+#calculator-action > button:focus-visible,
 #calculator-action > button:active {
     outline: #495057;
     border: 1px solid #f8f9fa;
@@ -186,15 +190,8 @@ body {
 #calculator-action > button {
     height: 3rem;
     width: 3rem;
-    background: #212529;
-    border: solid 1px #495057;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 8px #495057;
     margin: 0.1rem;
     line-height: 2rem;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #f8f9fa;
 }
 
 @media (min-width: 48rem) {
@@ -207,17 +204,12 @@ body {
         width: 80%;
         height: 4rem;
         margin: 0 auto 1.5rem;
-        border: 1px #495057 solid;
-        border-radius: 1rem;
-        color: #f8f9fa;
         font-size: 2rem;
-        text-align: center;
     }
 
     #calculator-action > button {
         height: 4rem;
         width: 4rem;
-        border-radius: 1rem;
         margin: 0.8rem;
         line-height: 4rem;
         font-size: 3rem;
@@ -241,15 +233,15 @@ body {
     font-size: 1.25rem;
     line-height: 1.25rem;
     margin: 0;
-    color: #f8f9fa;
 }
 
 #current-calculation {
     color: #adb5bd;
 }
 
-#current-result, #current-calculation {
-    margin: 0.5rem  auto;
+#current-result,
+#current-calculation {
+    margin: 0.5rem auto;
 }
 
 @media (min-width: 48rem) {
@@ -263,7 +255,7 @@ body {
     #app-result > p {
         margin: 0 auto 1.5rem;
     }
-    
+
     #current-result,
     #current-calculation,
     #app-result > p {
