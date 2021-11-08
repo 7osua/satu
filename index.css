@@ -163,7 +163,8 @@ body {
 }
 
 #input-number:focus-visible,
-#calculator-action > button:focus-visible {
+#calculator-action > button:focus-visible, 
+#calculator-action > button:active {
     outline: #495057;
     border: 1px solid #f8f9fa;
     box-shadow: none;
@@ -237,21 +238,18 @@ body {
 #app-result > p {
     text-align: center;
     font-weight: 300;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin: 0.2rem 0;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0;
     color: #f8f9fa;
 }
 
 #current-calculation {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    margin: 0 auto 1rem;
     color: #adb5bd;
 }
 
-#current-result {
-    margin: 0;
+#current-result, #current-calculation {
+    margin: 0.5rem  auto;
 }
 
 @media (min-width: 48rem) {
