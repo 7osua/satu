@@ -8,58 +8,56 @@ body {
 }
 
 body {
-    max-width: 80rem;
-    margin: 0 auto;
     box-sizing: border-box;
     display: block;
     background-color: #000000;
-    color: #ffffff;
+    color: #f8f9fa;
     text-decoration: none;
     line-height: 1.25rem;
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
-@keyframes fadeOut{
-    100%{
-        opacity:0;
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
         visibility: hidden;
     }
 }
 
-.loader{
-    position:fixed;
-    z-index:1;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+.loader {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #000000;
-    
 }
 
-.loader.hidden{
+.loader.hidden {
     animation: fadeOut 2s;
     animation-fill-mode: forwards;
 }
 
 .loader > img {
-    position:absolute;
+    position: absolute;
     width: 4rem;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .head {
     width: 100%;
     max-width: 47rem;
-    padding: 1rem 0 0;
-    margin: 1rem auto;
+    padding: 0;
+    margin: 0.5rem auto 0;
 }
 
 .head-logo {
-    margin: 1rem auto;
-    max-width: 60%;
+    margin: 0 auto 0;
+    max-width: 100%;
 }
 
 .head-logo-label {
@@ -86,7 +84,7 @@ body {
 
     @media (min-width: 48rem) {
         .head-logo {
-            margin: 4rem auto;
+            margin: 1rem auto;
             max-width: 80%;
         }
 
@@ -102,3 +100,176 @@ body {
     }
 }
 
+#app {
+    background-color: #343a40;
+    width: 80%;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    border: 1px solid #495057;
+    border-radius: 1rem;
+}
+
+#app-description {
+    margin: 0 auto;
+    color: #868e96;
+}
+
+#app-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+}
+
+#app-text {
+    width:80%; 
+    font-size: 1rem;
+    margin: 1rem auto 0;
+    line-height: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+    #app-title {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    #app-text {
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+}
+
+#app-action {
+    margin: 0;
+    padding: 1rem;
+}
+
+#input-number {
+    background-color: #212529;
+    display: block;
+    width: 100%;
+    height: 3rem;
+    margin: 0 auto 1rem;
+    border: 1px #495057 solid;
+    border-radius: 1rem;
+    color: #f8f9fa;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+#input-number:focus-visible,
+#calculator-action > button:focus-visible {
+    outline: #495057;
+    border: 1px solid #f8f9fa;
+    box-shadow: none;
+}
+
+#input-number[type='number'] {
+    -moz-appearance: textfield;
+}
+
+#input-number::-webkit-outer-spin-button,
+#input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#calculator-action {
+    text-align: center;
+}
+
+#calculator-action > button {
+    height: 3rem;
+    width: 3rem;
+    background: #212529;
+    border: solid 1px #495057;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px #495057;
+    margin: 0.1rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #f8f9fa;
+}
+
+@media (min-width: 48rem) {
+    #app-action {
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    #input-number {
+        width: 80%;
+        height: 4rem;
+        margin: 0 auto 1.5rem;
+        border: 1px #495057 solid;
+        border-radius: 1rem;
+        color: #f8f9fa;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #calculator-action > button {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 1rem;
+        margin: 0.8rem;
+        line-height: 4rem;
+        font-size: 3rem;
+    }
+}
+
+#app-result {
+    background-color: #212529;
+    width: 90%;
+    border: solid 1px #495057;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+#current-calculation,
+#current-result,
+#app-result > p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0.2rem 0;
+    color: #f8f9fa;
+}
+
+#current-calculation {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0 auto 1rem;
+    color: #adb5bd;
+}
+
+#current-result {
+    margin: 0;
+}
+
+@media (min-width: 48rem) {
+    #app-result {
+        width: 72%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    #current-calculation,
+    #app-result > p {
+        margin: 0 auto 1.5rem;
+    }
+    
+    #current-result,
+    #current-calculation,
+    #app-result > p {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
