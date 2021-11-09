@@ -12,21 +12,21 @@ function validateUserInput() {
 
 function add() {
     const userNumber = validateUserInput();
-    prevResult = currentResult;
+    let prevResult = currentResult;
     calculationDescription = `${prevResult} + ${userNumber}`;
     currentResult = currentResult + Number(getUserInput());
     outputResult(currentResult, calculationDescription);
 }
 
 function sub() {
-    prevResult = currentResult;
+    let prevResult = currentResult;
     calculationDescription = `${prevResult} - ${Number(getUserInput())}`;
     currentResult = currentResult - Number(getUserInput());
     outputResult(currentResult, calculationDescription);
 }
 
 function mul() {
-    prevResult = currentResult;
+    let prevResult = currentResult;
     calculationDescription = `${prevResult} * ${Number(getUserInput())}`;
     currentResult = currentResult * Number(getUserInput());
     outputResult(currentResult, calculationDescription);
@@ -34,14 +34,16 @@ function mul() {
 
 function div() {
     const userNumber = validateUserInput();
+    let prevResult = currentResult;
     if (userNumber !== 0) {
         prevResult = currentResult;
-        calculationDescription = `${prevResult} / ${userNumber}`;
         currentResult = currentResult / Number(getUserInput());
-        outputResult(currentResult, calculationDescription);
     } else {
-        alert('Input tidak valid atau bernilai 0');
+        currentResult = 0;
+        // alert('Input tidak valid atau bernilai 0');
     }
+    calculationDescription = `${prevResult} / ${userNumber}`;
+    outputResult(currentResult, calculationDescription);
 }
 
 addButton.addEventListener('click', add);
