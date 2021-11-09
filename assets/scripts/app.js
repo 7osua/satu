@@ -1,6 +1,36 @@
-let currentResult = 0;
+const defaultResult = 0;
+let currentResult = defaultResult;
+let calculationDescription = '';
 
-currentResult = currentResult + 10;
+function add() {
+    prevResult = currentResult;
+    calculationDescription = `${prevResult} + ${Number(getUserInput())}`;
+    currentResult = currentResult + Number(getUserInput());
+    outputResult(currentResult, calculationDescription);
+}
 
-outputResult(currentResult,currentResult.toString());
+function sub() {
+    prevResult = currentResult;
+    calculationDescription = `${prevResult} - ${Number(getUserInput())}`;
+    currentResult = currentResult - Number(getUserInput());
+    outputResult(currentResult, calculationDescription);
+}
 
+function mul() {
+    prevResult = currentResult;
+    calculationDescription = `${prevResult} * ${Number(getUserInput())}`;
+    currentResult = currentResult * Number(getUserInput());
+    outputResult(currentResult, calculationDescription);
+}
+
+function div() {
+    prevResult = currentResult;
+    calculationDescription = `${prevResult} / ${Number(getUserInput())}`;
+    currentResult = currentResult / Number(getUserInput());
+    outputResult(currentResult, calculationDescription);
+}
+
+addButton.addEventListener('click', add);
+subButton.addEventListener('click', sub);
+mulButton.addEventListener('click', mul);
+divButton.addEventListener('click', div);

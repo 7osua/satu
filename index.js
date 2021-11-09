@@ -47,7 +47,7 @@ const createMainApp = function () {
                         <button type="button" id="add-btn" class="btn">+</button>        
                         <button type="button" id="sub-btn" class="btn">-</button>        
                         <button type="button" id="mul-btn" class="btn">*</button>        
-                        <button type="button" id="div-btn" class="btn">+</button>        
+                        <button type="button" id="div-btn" class="btn">/</button>        
                     </div>
                 </section>
                 <section id="app-result">
