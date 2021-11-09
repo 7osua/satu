@@ -14,6 +14,22 @@ function validateUserInput() {
 function createAndWriteOutput(operator, beforeCalculation, calcNumber) {
     calculationDescription = `${beforeCalculation} ${operator} ${calcNumber}`;
     outputResult(currentResult, calculationDescription);
+    resetUserInput();
+}
+
+function writeToLog(
+    operationIndentifier,
+    prevResult,
+    operationNumber,
+    newResult,
+) {
+    const logEntry = {
+        operation: operationIndentifier,
+        prevResult: prevResult,
+        entererNumber: operationNumber,
+        result: newResult,
+    };
+    logEntries.push(logEntry);
 }
 
 function add() {
@@ -21,7 +37,7 @@ function add() {
     let prevResult = currentResult;
     currentResult += userNumber;
     createAndWriteOutput('+', prevResult, userNumber);
-    resetUserInput();
+    writeToLog('ADDITION',prevResult,userNumber,currentResult);
 }
 
 function sub() {
@@ -29,7 +45,7 @@ function sub() {
     let prevResult = currentResult;
     currentResult -= userNumber;
     createAndWriteOutput('-', prevResult, userNumber);
-    resetUserInput();
+    writeToLog('SUBTRACTION',prevResult,userNumber,currentResult);
 }
 
 function mul() {
@@ -37,7 +53,7 @@ function mul() {
     let prevResult = currentResult;
     currentResult *= userNumber;
     createAndWriteOutput('*', prevResult, userNumber);
-    resetUserInput();
+    writeToLog('MULTIPLICATION',prevResult,userNumber,currentResult);
 }
 
 function div() {
@@ -47,7 +63,7 @@ function div() {
         currentResult /= userNumber;
         createAndWriteOutput('/', prevResult, userNumber);
     }
-    resetUserInput();
+    writeToLog('DIVISION',prevResult,userNumber,currentResult);
 }
 
 addButton.addEventListener('click', add);
