@@ -1,38 +1,42 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 let calculationDescription = '';
+let logEntries = [];
 
 function validateUserInput() {
     const validInput = Number(getUserInput());
-    if (isNaN(validateUserInput) && isNaN(currentResult)) {
+    if ((isNaN(validInput) && isNaN(currentResult)) || validInput === 0) {
         return 0;
     }
     return validInput;
 }
 
+function createAndWriteOutput(operator, beforeCalculation, calcNumber) {
+    calculationDescription = `${beforeCalculation} ${operator} ${calcNumber}`;
+    outputResult(currentResult, calculationDescription);
+}
 
 function add() {
     const userNumber = validateUserInput();
     let prevResult = currentResult;
-    calculationDescription = `${prevResult} + ${userNumber}`;
-    currentResult = currentResult + Number(getUserInput());
-    outputResult(currentResult, calculationDescription);
+    currentResult += userNumber;
+    createAndWriteOutput('+', prevResult, userNumber);
     resetUserInput();
 }
 
 function sub() {
+    const userNumber = validateUserInput();
     let prevResult = currentResult;
-    calculationDescription = `${prevResult} - ${Number(getUserInput())}`;
-    currentResult = currentResult - Number(getUserInput());
-    outputResult(currentResult, calculationDescription);
+    currentResult -= userNumber;
+    createAndWriteOutput('-', prevResult, userNumber);
     resetUserInput();
 }
 
 function mul() {
+    const userNumber = validateUserInput();
     let prevResult = currentResult;
-    calculationDescription = `${prevResult} * ${Number(getUserInput())}`;
-    currentResult = currentResult * Number(getUserInput());
-    outputResult(currentResult, calculationDescription);
+    currentResult *= userNumber;
+    createAndWriteOutput('*', prevResult, userNumber);
     resetUserInput();
 }
 
@@ -40,14 +44,9 @@ function div() {
     const userNumber = validateUserInput();
     let prevResult = currentResult;
     if (userNumber !== 0) {
-        prevResult = currentResult;
-        currentResult = currentResult / Number(getUserInput());
-    } else {
-        currentResult = 0;
-        // alert('Input tidak valid atau bernilai 0');
+        currentResult /= userNumber;
+        createAndWriteOutput('/', prevResult, userNumber);
     }
-    calculationDescription = `${prevResult} / ${userNumber}`;
-    outputResult(currentResult, calculationDescription);
     resetUserInput();
 }
 
