@@ -10,12 +10,14 @@ function validateUserInput() {
     return validInput;
 }
 
+
 function add() {
     const userNumber = validateUserInput();
     let prevResult = currentResult;
     calculationDescription = `${prevResult} + ${userNumber}`;
     currentResult = currentResult + Number(getUserInput());
     outputResult(currentResult, calculationDescription);
+    resetUserInput();
 }
 
 function sub() {
@@ -23,6 +25,7 @@ function sub() {
     calculationDescription = `${prevResult} - ${Number(getUserInput())}`;
     currentResult = currentResult - Number(getUserInput());
     outputResult(currentResult, calculationDescription);
+    resetUserInput();
 }
 
 function mul() {
@@ -30,6 +33,7 @@ function mul() {
     calculationDescription = `${prevResult} * ${Number(getUserInput())}`;
     currentResult = currentResult * Number(getUserInput());
     outputResult(currentResult, calculationDescription);
+    resetUserInput();
 }
 
 function div() {
@@ -44,6 +48,7 @@ function div() {
     }
     calculationDescription = `${prevResult} / ${userNumber}`;
     outputResult(currentResult, calculationDescription);
+    resetUserInput();
 }
 
 addButton.addEventListener('click', add);

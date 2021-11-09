@@ -12,6 +12,10 @@ function getUserInput(){
     return userInput.value;
 }
 
+function resetUserInput(){
+    userInput.value = '';
+}
+
 function outputResult(result, text) {
     currentResultOutput.textContent = result;
     currentCalculationOutput.textContent = text;
