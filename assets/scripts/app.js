@@ -39,8 +39,9 @@ function div() {
         calculationDescription = `${prevResult} / ${userNumber}`;
         currentResult = currentResult / Number(getUserInput());
         outputResult(currentResult, calculationDescription);
+    } else {
+        alert('Input tidak valid atau bernilai 0');
     }
-    alert('Input tidak valid atau bernilai 0');
 }
 
 addButton.addEventListener('click', add);
