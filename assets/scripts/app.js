@@ -12,13 +12,9 @@ function validateUserInput() {
 }
 
 function createAndWriteOutput(operator, beforeCalculation, calcNumber) {
-    if (beforeCalculation !== 0 && currentResult !== 0) {
-        calculationDescription = `${beforeCalculation} ${operator} ${calcNumber}`;
-    } else {
-        calculationDescription = `${calcNumber}`;
-    }
+    calculationDescription = `${beforeCalculation} ${operator} ${calcNumber}`;
     outputResult(currentResult, calculationDescription);
-    // resetUserInput();
+    resetUserInput();
 }
 
 function writeToLog(
