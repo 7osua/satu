@@ -6,9 +6,16 @@ let logEntries = [];
 function validateUserInput() {
     const validInput = Number(getUserInput());
     if ((isNaN(validInput) && isNaN(currentResult)) || validInput === 0) {
-        return;
+        return 0;
     }
     return validInput;
+}
+
+function initValue() {
+    if (validateUserInput() !== 0) {
+        currentResult = validateUserInput();
+        currentCalculationOutput.textContent = validateUserInput();
+    }
 }
 
 function createAndWriteOutput(operator, beforeCalculation, calcNumber) {
@@ -39,7 +46,7 @@ function calculateResult(calculateType) {
             calculateType !== 'SUB' &&
             calculateType !== 'MUL' &&
             calculateType !== 'DIV') ||
-        !userNumber 
+        userNumber === 0
     ) {
         return;
     }
@@ -79,6 +86,12 @@ function div() {
     calculateResult('DIV');
 }
 
+userInput.addEventListener('input', function () {
+    if (currentResult === 0) {
+        initValue();
+        resetUserInput();
+    }
+});
 addButton.addEventListener('click', add);
 subButton.addEventListener('click', sub);
 mulButton.addEventListener('click', mul);
