@@ -6,7 +6,7 @@ let logEntries = [];
 function validateUserInput() {
     const validInput = Number(getUserInput());
     if ((isNaN(validInput) && isNaN(currentResult)) || validInput === 0) {
-        return 0;
+        return;
     }
     return validInput;
 }
@@ -39,7 +39,7 @@ function calculateResult(calculateType) {
             calculateType !== 'SUB' &&
             calculateType !== 'MUL' &&
             calculateType !== 'DIV') ||
-        userNumber === 0
+        !userNumber 
     ) {
         return;
     }
