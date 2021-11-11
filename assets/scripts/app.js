@@ -86,8 +86,8 @@ function div() {
     calculateResult('DIV');
 }
 
-userInput.addEventListener('input', function () {
-    if (currentResult === 0) {
+userInput.addEventListener('change', function () {
+    if (!currentResult) {
         initValue();
         resetUserInput();
     }
