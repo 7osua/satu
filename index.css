@@ -150,14 +150,15 @@ body {
 #calculator-action > button {
     color: #f8f9fa;
     background: #212529;
-    /* box-shadow: 0 0 8px #495057; */
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 300;
     border: solid 2px #495057;
     border-radius: 1rem;
-    font-size: 1.5rem;
     text-align: center;
 }
 
-#input-number::placeholder{
+#input-number::placeholder {
     color: #f8f9fa;
 }
 
@@ -213,8 +214,8 @@ body {
         height: 4rem;
         width: 4rem;
         margin: 0.8rem;
-        line-height: 4rem;
-        font-size: 3rem;
+        line-height: 2rem;
+        font-size: 2rem;
     }
 }
 
