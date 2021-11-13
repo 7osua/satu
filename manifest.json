@@ -1,6 +1,7 @@
 {
     "name": "01.satu",
     "short_name": "satu",
+    "start_url": ".",
     "icons": [
         {
             "src": "favicon_io/favicon-16x16.png",
@@ -24,6 +25,6 @@
         }
     ],
     "theme_color": "#f03e3e",
-    "background_color": "#000000",
+    "background_color": "#212529",
     "display": "fullscreen"
 }
