@@ -1,5 +1,8 @@
 # [SATU](https://www.satu.josuamanullang.com) - HTML & CSS & JavaScript
 
+Web app untuk melakukan perhitungan dasar (+,-,*,/).
+Dengan mengembangkan web ini, sejauh ini sudah bisa memperdalam :
+
 -   [x] Variables
 -   [x] Data Types
 -   [x] Operators
