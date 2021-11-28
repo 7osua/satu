@@ -10,7 +10,7 @@ body {
 body {
     box-sizing: border-box;
     display: block;
-    background-color: #212529;
+    background-color: #343a40;
     color: #f8f9fa;
     text-decoration: none;
     line-height: 1.25rem;
@@ -102,7 +102,7 @@ body {
 }
 
 #app {
-    background-color: #212529;
+    background-color: inherit;
     width: 80%;
     margin: 0.5rem auto;
     padding: 1rem;
@@ -114,7 +114,7 @@ body {
 }
 
 #app-title {
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 500;
